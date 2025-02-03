@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.27)
+
 project(SparkGameEngine)
 
 set(CMAKE_CXX_STANDARD 17)
@@ -9,4 +10,9 @@ find_program(CLANG_TIDY_EXE NAMES "clang-tidy")
 
 include(./cmake/ClangTidy.cmake)
 
+add_subdirectory(./vendor/googletest)
+
+include(GoogleTest)
+
 add_subdirectory(./spark)
+
